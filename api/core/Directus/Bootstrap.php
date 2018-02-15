@@ -389,7 +389,7 @@ class Bootstrap
         self::requireConstants(['DIRECTUS_ENV', 'DB_TYPE', 'DB_HOST', 'DB_PORT', 'DB_NAME', 'DB_USER', 'DB_PASSWORD'], __FUNCTION__);
 
         // TODO: Store default default charset somewhere
-        $charset = defined('DB_CHARSET') ? DB_CHARSET : 'utf8mb4';
+        $charset = defined('DB_CHARSET') ? DB_CHARSET : 'utf8';
         $dbConfig = [
             'driver' => 'Pdo_' . DB_TYPE,
             'host' => DB_HOST,
